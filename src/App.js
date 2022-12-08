@@ -1,8 +1,16 @@
-import logo from "./logo.svg";
+import React from "react";
 import "./App.css";
 
-function App() {
-  return <div className="App">Weather App</div>;
+export default function App() {
+  return (
+    <div className="App">
+      Weather App
+      <footer>
+        <a href="/" target="_blank">
+          {" "}
+          Open Source by Shayla
+        </a>
+      </footer>
+    </div>
+  );
 }
-
-export default App;
