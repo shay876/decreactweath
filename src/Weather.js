@@ -18,6 +18,14 @@ export default function Weather() {
     });
   }
 
+  function handleSearch(city) {
+    let apiKey = "7597e4852a4ffc5d7a7f822fce9703a9";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  //
   if (weatherData.ready) {
     return (
       <div className="Weather">
@@ -64,11 +72,8 @@ export default function Weather() {
       </div>
     );
   } else {
-    let apiKey = "7597e4852a4ffc5d7a7f822fce9703a9";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${weatherData.city}&appid=${apiKey}&units=metric`;
+    handleSearch("Calgary");
 
-    axios.get(apiUrl).then(handleResponse);
-
-    return "loading...";
+    return "Loading...";
   }
 }
