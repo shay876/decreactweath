@@ -16,13 +16,13 @@ export default function WeatherTemperature(props) {
     return (
       <div className="WeatherTemperature">
         <div className="col-6">
-          <div className="temperature">{Math.round(props.celcius)}</div>
-          <div className="unit">
-            °C |{" "}
+          <span className="temperature">{Math.round(props.celcius)}</span>
+          <span className="unit">
+            °C |
             <a href="/" onClick={convertToFarenheit}>
               °F
-            </a>{" "}
-          </div>
+            </a>
+          </span>
         </div>
       </div>
     );
@@ -31,13 +31,13 @@ export default function WeatherTemperature(props) {
     return (
       <div className="WeatherTemperature">
         <div className="col-6">
-          <div className="temperature">{Math.round(farenheit)}</div>
-          <div className="unit">
+          <span className="temperature">{Math.round(farenheit)}</span>
+          <span className="unit">
             <a href="/" onClick={convertToCelcius}>
               °C
             </a>{" "}
             | °F{" "}
-          </div>
+          </span>
         </div>
       </div>
     );
