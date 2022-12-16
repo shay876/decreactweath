@@ -9,7 +9,7 @@ export default function App() {
         Weather App
         <Weather defaultCity="Calgary" />
         <footer>
-          <a href="https://github.com/shay876/decreactweath" target="_blank">
+          <a href="https://github.com/shay876/decreactweath">
             {" "}
             Open Source by Shayla
           </a>
