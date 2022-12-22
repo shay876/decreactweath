@@ -6,7 +6,6 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        Weather App
         <Weather defaultCity="Calgary" />
         <footer>
           <a href="https://github.com/shay876/decreactweath">
